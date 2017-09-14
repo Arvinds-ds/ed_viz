@@ -9,6 +9,7 @@ Install ed_viz
 `pip install git+https://github.com/Arvinds-ds/ed_viz.git`
 
 
+
 ```
 import ed_viz
 
@@ -21,6 +22,7 @@ y = Normal(loc=ed.dot(X, w) + b, scale=tf.ones(N)*0.1,name='y')
 
 ```
 
+Simple visualization of all edward variables in current graph 
 ```
 
 ed_viz.visualize_simple()
@@ -29,8 +31,9 @@ ed_viz.visualize_simple()
 
 ![simple](img/1.png)
 
+Detailed Visualization of entire computation graph including edward variables
 ```
-ed_viz.visualize_full(depth=1)
+ed_viz.visualize_full(depth=1) # change depth to see varying details
 
 ```
 ![full](img/2.png)
