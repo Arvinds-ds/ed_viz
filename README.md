@@ -24,10 +24,10 @@ ed_viz.visualize_simple()
 
 ```
 
-['simple'](img/1.png)
+![simple](img/1.png)
 
 ```
 ed_viz.visualize_full(depth=1)
 
 ```
-['full'](img/2.png)
+![full](img/2.png)
