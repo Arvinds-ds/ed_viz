@@ -11,7 +11,7 @@ setup(
     author_email='arvindxxxx@gmail.com',
     url='https://github.com/arvinds-ds/ed_viz',
     py_modules=(
-        'ed_viz','
+        'ed_viz',
     ),
     install_requires=(
         'graphviz',
