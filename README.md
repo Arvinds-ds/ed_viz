@@ -1,7 +1,10 @@
 ## ed_viz - Tensorflow/Edward Graph Visualize 
 
-A small python script to visualize tensorflow graph especially for edward (edwardlib.org).
-Requires the Graphviz software (Graphviz.org) and python graphiz library (pip install graphviz)
+A small python script to visualize tensorflow graph especially for edward (edwardlib.org). 
+Requires Edward,  Graphviz software (Graphviz.org) and python graphviz library (pip install graphviz)
+
+Install ed_viz
+---------------
 
 `pip install git+https://github.com/Arvinds-ds/ed_viz.git`
 
