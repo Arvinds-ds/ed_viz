@@ -367,10 +367,18 @@ def visualize_simple():
     for node in ed.random_variables():
         try:
             digraph.node(node.unique_name, node.name + ' ~ ' + type(node).__name__ + '\n' + str(node.shape))
-        except:
+        except AttributeError:
             digraph.node(node.name, node.name + ' ~ ' + type(node).__name__ + '\n' + str(node.shape))
     for node in ed.random_variables():
         if node.get_parents() != []:
             for parent in node.get_parents():
-                digraph.edge(parent.unique_name, node.unique_name)
+                try:
+                    parent_name = parent.unique_name
+                    try:
+                        node_name = node.unique_name
+                    except AttributeError:
+                        node_name = node.name
+                except AttributeError:
+                    parent_name = parent.name
+                digraph.edge(parent_name, node_name)
     return digraph
