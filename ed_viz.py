@@ -380,5 +380,9 @@ def visualize_simple():
                         node_name = node.name
                 except AttributeError:
                     parent_name = parent.name
+                    try:
+                        node_name = node.unique_name
+                    except AttributeError:
+                        node_name = node.name
                 digraph.edge(parent_name, node_name)
     return digraph
