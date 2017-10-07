@@ -365,7 +365,10 @@ def visualize_simple():
     digraph.node_attr.update(node_pref)
     digraph.edge_attr.update(edge_pref)    
     for node in ed.random_variables():
-        digraph.node(node.unique_name, node.name + ' ~ ' + type(node).__name__ + '\n' + str(node.shape))
+        try:
+            digraph.node(node.unique_name, node.name + ' ~ ' + type(node).__name__ + '\n' + str(node.shape))
+        except:
+            digraph.node(node.name, node.name + ' ~ ' + type(node).__name__ + '\n' + str(node.shape))
     for node in ed.random_variables():
         if node.get_parents() != []:
             for parent in node.get_parents():
